@@ -1,0 +1,20 @@
+{
+  "name": "react-component",
+  "version": "0.0.1",
+  "description": "Simple react component using CJS",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "author": "Rey Guerra",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.2.1",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-react": "^0.10.0"
+  },
+  "dependencies": {
+    "react": "^0.12.1"
+  }
+}
