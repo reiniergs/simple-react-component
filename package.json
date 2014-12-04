@@ -3,12 +3,23 @@
   "version": "0.0.1",
   "description": "Simple react component using CJS",
   "main": "index.js",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "author": "Rey Guerra",
   "license": "MIT",
+  "browser": {
+    "react": "./node_modules/react/dist/react.js"
+  },
+  "browserify-shim": {
+      "React": "GLOBAL:React"
+  },
+  "browserify": {
+      "transform": [
+          "browserify-shim"
+      ]
+  },
   "devDependencies": {
+    "browserify": "^6.3.3",
+    "browserify-shim": "^3.8.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.2.1",
     "grunt-contrib-compass": "^1.0.1",

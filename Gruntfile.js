@@ -18,13 +18,13 @@ module.exports = function(grunt) {
             },    
         },
         react: {
-            files: {
-              expand: true,
-              cwd: 'src/jsx',
-              src: ['**/*.jsx'],
-              dest: 'build/js',
-              ext: '.js' 
-            }
+                files: {
+                    expand: true,
+                    cwd: 'src/jsx',
+                    src: ['**/*.jsx'],
+                    dest: 'src/js',
+                    ext: '.js' 
+                }
         },
         compass: {                  
             dev: {                    
@@ -37,14 +37,14 @@ module.exports = function(grunt) {
         browserify : {
             dist : {
                 files : {
-                    'dist/<%= pkg.name %>.js' : ['build/**/*.js'] 
+                    'dist/<%= pkg.name %>.js' : ['src/**/*.js'] 
                 }
             },
             options : {
                 browserifyOptions : {
-                    debug : true
+                    debug : true,
                 },
-                exclude : ['react']
+                ignore : ['react']
             }
         }
     });
